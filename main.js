@@ -4,14 +4,12 @@ const list = document.querySelector('.list');
 const input = document.querySelector('input');
 const button = document.querySelector('#button1');
 let liID = localStorage.getItem('liID') ?? 0;
-console.log(liID);
 
 // Retrieves locally stored entries if they exist
 if (localStorage.length != 0) {
     for (let i = 0; i < localStorage.length; i++) {
         let arr = Object.keys(localStorage).sort();
         let parser = arr[i];
-        console.log(arr[i]);
         if (localStorage.getItem(parser) != null && 
         arr[i] != 'liID' ) {
             const li = document.createElement('li');
